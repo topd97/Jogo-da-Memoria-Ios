@@ -309,6 +309,12 @@
                                     <action selector="newGameTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OcE-p3-new"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HighScore: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYI-1B-c7B">
+                                <rect key="frame" x="95" y="688" width="224" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
@@ -317,14 +323,17 @@
                             <constraint firstItem="MaX-JK-1JD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9fX-z0-BOz"/>
                             <constraint firstItem="tjr-aI-FAj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DuJ-Dm-J1Q"/>
                             <constraint firstItem="tjr-aI-FAj" firstAttribute="top" secondItem="ckj-wH-jXh" secondAttribute="bottom" constant="16" id="I48-g8-4gy"/>
+                            <constraint firstItem="RYI-1B-c7B" firstAttribute="top" secondItem="MaX-JK-1JD" secondAttribute="bottom" constant="100" id="SaG-yA-iSj"/>
                             <constraint firstItem="ckj-wH-jXh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ut8-76-rBX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tjr-aI-FAj" secondAttribute="bottom" id="aTR-Nv-F6m"/>
-                            <constraint firstItem="ckj-wH-jXh" firstAttribute="top" secondItem="MaX-JK-1JD" secondAttribute="bottom" constant="150" id="r6S-qD-WoA"/>
+                            <constraint firstItem="RYI-1B-c7B" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jPg-R8-dWJ"/>
+                            <constraint firstItem="ckj-wH-jXh" firstAttribute="top" secondItem="RYI-1B-c7B" secondAttribute="bottom" constant="2" id="r6S-qD-WoA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="flipLabel" destination="ckj-wH-jXh" id="48Q-i9-CYp"/>
+                        <outlet property="highScoreLabel" destination="RYI-1B-c7B" id="aRr-Nv-xUc"/>
                         <outletCollection property="cardButtons" destination="z9k-SO-9co" collectionClass="NSMutableArray" id="T4o-w1-l8n"/>
                         <outletCollection property="cardButtons" destination="PQC-TU-qgO" collectionClass="NSMutableArray" id="w6Q-dr-4cf"/>
                         <outletCollection property="cardButtons" destination="fy6-u3-syo" collectionClass="NSMutableArray" id="lhU-i3-eHS"/>

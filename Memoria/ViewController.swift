@@ -16,10 +16,17 @@ class ViewController: UIViewController {
         }
     }
     
+    var highScore = 0{
+        didSet{
+            highScoreLabel.text = "HighScore: \(highScore)"
+        }
+    }
+    
     lazy var jogoDaMemoria: Memoria = Memoria.init(numberOfPairs: cardButtons.count/2)
 
     @IBOutlet var cardButtons: [UIButton]!
     @IBOutlet weak var flipLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         flipCount += 1
@@ -72,11 +79,20 @@ class ViewController: UIViewController {
     }
     
     func restart(){
+        
+        self.seeHighScore()
         possibleEmojis = ["🎃","👻","🤖","👽","😈","👹","💩","👾","🤠","🤢","🤑","🥶","🥵","🤩","😻"]
         jogoDaMemoria = Memoria.init(numberOfPairs: cardButtons.count/2)
         jogoDaMemoria.cards.shuffle()
+        
         flipCount = 0
         self.updateView()
+    }
+    
+    func seeHighScore(){
+        if (highScore == 0 || highScore > flipCount), jogoDaMemoria.isGameComplete(){
+            highScore = flipCount
+        }
     }
 
 

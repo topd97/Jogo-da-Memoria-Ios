@@ -43,4 +43,13 @@ class Memoria{
             self.turnUpCardIndex = nil
         }
     }
+    
+    func isGameComplete() -> Bool{
+        for card in cards{
+            if(!card.isMatched){
+                return false
+            }
+        }
+        return true
+    }
 }

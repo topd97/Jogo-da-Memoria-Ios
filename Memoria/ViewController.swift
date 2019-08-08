@@ -12,13 +12,13 @@ class ViewController: UIViewController {
     
     var flipCount = 0{
         didSet{
-            flipLabel.text = "Vezes viradas: \(flipCount)"
+            flipLabel.text = "Vezes viradas\n\(flipCount)"
         }
     }
     
     var highScore = 0{
         didSet{
-            highScoreLabel.text = "HighScore: \(highScore)"
+            highScoreLabel.text = "HighScore\n\(highScore)"
         }
     }
     
